@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactRendererComponent } from './angular/react-renderer.component';
+import { NgHeroComponent } from './angular/ng-hero.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReactRendererComponent,
+    NgHeroComponent
   ],
   imports: [
     BrowserModule,
