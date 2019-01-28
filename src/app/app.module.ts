@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactRendererComponent } from './angular/react-renderer.component';
 import { NgHeroComponent } from './angular/ng-hero.component';
+import {ReactOwcRendererComponent} from './angular/react-owc-renderer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReactRendererComponent,
+    ReactOwcRendererComponent,
     NgHeroComponent
   ],
   imports: [

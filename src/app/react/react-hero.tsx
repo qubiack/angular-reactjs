@@ -9,7 +9,8 @@ class ReactHero extends React.Component<any, any> {
   render() {
     return (
       <span>
-        react-hero works!
+        <span>react-hero works!</span><br/>
+        <span>Don't have any data</span>
       </span>
     );
   }
