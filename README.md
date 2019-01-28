@@ -48,7 +48,6 @@ app.component.ts
 Now you need create special component in Angular, which will be responsible for embedding ReactJS application. This component I will call `ReactRendererComponent`. This component is very simple and it have only one template line, constructor with `import Injector` and one line in `ngOnInit`:
 
 ```
-import {Component, Injector, OnInit} from '@angular/core';
 @Component({
   selector: 'app-react-renderer',
   template: `<div class="react-container" id="react-renderer"></div>`
@@ -118,6 +117,18 @@ class ReactHero extends React.Component<any, any> {
   }
 }
 export default ReactHero;
+```
+In Angular App we should use `ReactRenderer` component, so we use:
+
+```
+App.component data:
+<hr>
+<h2>This is Angular</h2>
+<img width="100" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<hr>
+
+<!-- Without data binding -->
+<app-react-renderer></app-react-renderer>
 ```
 
 At this moment we have Angular app with embedded ReactJS app, but without any communication. Is it enough for you? If yes, it's all. If you need any kind of communication between both application, I present you two option below.
