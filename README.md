@@ -131,7 +131,7 @@ App.component data:
 <app-react-renderer></app-react-renderer>
 ```
 
-At this moment we have Angular app with embedded ReactJS app, but without any communication. Is it enough for you? If yes, it's all. If you need any kind of communication between both application, I present you two option below.
+At this moment we have Angular app with embedded ReactJS app, but without any communication. Is it enough for you? If yes, it's all. If you need any kind of communication between both application, I present you RxJS option below.
 
 ## Angular-ReactJS with bidirectional communication
 
