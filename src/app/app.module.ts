@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactRendererComponent } from './angular/react-renderer.component';
 import { NgHeroComponent } from './angular/ng-hero.component';
-import {ReactOwcRendererComponent} from './angular/react-owc-renderer.component';
+import {ReactBidirectionalRendererComponent} from './angular/react-bidirectional-renderer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReactRendererComponent,
-    ReactOwcRendererComponent,
+    ReactBidirectionalRendererComponent,
     NgHeroComponent
   ],
   imports: [

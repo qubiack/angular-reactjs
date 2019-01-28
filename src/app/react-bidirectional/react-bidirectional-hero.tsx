@@ -2,13 +2,11 @@ import * as React from 'react';
 import {IHero} from '../model/hero';
 import {BehaviorSubject} from 'rxjs';
 
-interface IReactOwcHero {
+interface IReactBidirectionalHero {
   heroes$: BehaviorSubject<IHero[]>;
 }
 
-class ReactOwcHero extends React.Component<IReactOwcHero, any> {
-  public heroes: IHero[];
-
+class ReactBidirectionalHero extends React.Component<IReactBidirectionalHero, any> {
   constructor(props) {
     super(props);
 
@@ -55,4 +53,4 @@ class ReactOwcHero extends React.Component<IReactOwcHero, any> {
   }
 }
 
-export default ReactOwcHero;
+export default ReactBidirectionalHero;
