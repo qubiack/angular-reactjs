@@ -4,10 +4,15 @@ I have a Angular app and some part of application I want write in ReactJS. How c
 
 
 ## You can need different option, so I write it in 3 paragraph:
+* [Demo](#demo)
 * [Angular-ReactJS without communication](#angular-reactjs-without-communication)
 * [Angular-ReactJS with bidirectional communication](#angular-reactjs-with-bidirectional-communication)
 
 All code below is minimal to show a problem on a presented step. On GitHub you have a complete code to solve a problem, not always 1:1 with example below because this code is extended.
+
+## Demo
+
+Click hire if you look for [demo](https://angular-react.simplysolutions.pl/)!
 
 ## Angular-ReactJS without communication
 
@@ -203,12 +208,10 @@ And in `app.component.ts` we initialize  with data (Zeus and Poseidon):
 export class AppComponent implements OnInit {
   public heroesObj$: BehaviorSubject<IHero[]>;
   public heroes: IHero[];
-  public counter: number;
 
   constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {
-    this.counter = 1;
 
     this.heroService.getHeroes$().subscribe((res: IHero[]) => {
       this.heroes = res;
@@ -245,7 +248,7 @@ class ReactBidirectionalApp extends React.Component<IReactBidirectionalApp, any>
   render() {
     return (
       <div className={'renderer'}>
-        <h2>ReactJS component (one way data binding): </h2>
+        <h2>ReactJS component (bidirectional data binding): </h2>
         <ReactBidirectionalHero heroes$={this.state.heroes$}/>
       </div>
     );
@@ -394,8 +397,8 @@ App.component data:
 <app-ng-hero></app-ng-hero>
 <hr>
 
-<!-- With one way data binding-->
-<app-react-owc-renderer [heroes$]="heroesObj$" [counter]="counter"></app-react-owc-renderer>
+<!-- With bidirectional data binding-->
+<app-react-owc-renderer [heroes$]="heroesObj$"></app-react-owc-renderer>
 <hr>
 ```
 

@@ -10,13 +10,10 @@ import {HeroService} from './angular/hero.service';
 export class AppComponent implements OnInit {
   public heroesObj$: BehaviorSubject<IHero[]>;
   public heroes: IHero[];
-  public counter: number;
 
   constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {
-    this.counter = 1;
-
     this.heroService.getHeroes$().subscribe((res: IHero[]) => {
       this.heroes = res;
     });
