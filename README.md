@@ -12,7 +12,7 @@ All code below is minimal to show a problem on a presented step. On GitHub you h
 
 ## Demo
 
-Click hire if you look for [demo](https://angular-react.simplysolutions.pl/)!
+Click here if you look for [demo](https://angular-react.simplysolutions.pl/)!
 
 ## Angular-ReactJS without communication
 
@@ -314,7 +314,7 @@ class ReactBidirectionalHero extends React.Component<IReactBidirectionalHero, an
   }
 
   render() {
-    // Hire we render RxJS part of application with addAge button and ADD ATENA button below
+    // Here we render RxJS part of application with addAge button and ADD ATENA button below
     const heroes = this.state.heroes.map((hero: IHero, i) => {
       return <span key={i}>{hero.name} - {hero.age} <button onClick={() => this.addAge(i)}>Add {hero.name} age</button><br/></span>;
     });
@@ -340,7 +340,7 @@ Now we need to initialize ReactJS app in Angular application, so we create `angu
   template: `<div class="react-container" id="react-owc-renderer"></div>`
 })
 export class ReactBidirectionalRendererComponent implements OnInit {
-  // Hire we get data from parent component, but of course we can also subscribe this data directly form HeroService if we prefer this way
+  // Here we get data from parent component, but of course we can also subscribe this data directly form HeroService if we prefer this way
   @Input() heroes$: BehaviorSubject<IHero[]>;
 
   constructor(public injector: Injector) { }
